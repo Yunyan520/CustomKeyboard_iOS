@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C831A302005AB9900B1736A /* PwNumKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C831A2F2005AB9900B1736A /* PwNumKeyBoardView.m */; };
+		3C831A342005B08100B1736A /* PwLettersKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C831A332005B08100B1736A /* PwLettersKeyboard.m */; };
+		3C831A372005C0AA00B1736A /* PwSymbolKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C831A362005C0AA00B1736A /* PwSymbolKeyboard.m */; };
+		3C831A3A2005CB9100B1736A /* PwKeyboardBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C831A392005CB9100B1736A /* PwKeyboardBaseView.m */; };
+		3CF83F4E2004BFCC00EA19F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF83F4D2004BFCC00EA19F1 /* AppDelegate.m */; };
+		3CF83F512004BFCC00EA19F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF83F502004BFCC00EA19F1 /* ViewController.m */; };
+		3CF83F542004BFCC00EA19F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF83F522004BFCC00EA19F1 /* Main.storyboard */; };
+		3CF83F562004BFCC00EA19F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CF83F552004BFCC00EA19F1 /* Assets.xcassets */; };
+		3CF83F592004BFCC00EA19F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF83F572004BFCC00EA19F1 /* LaunchScreen.storyboard */; };
+		3CF83F5C2004BFCC00EA19F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF83F5B2004BFCC00EA19F1 /* main.m */; };
+		3CF83F662004BFCC00EA19F1 /* CustomKeybordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF83F652004BFCC00EA19F1 /* CustomKeybordTests.m */; };
+		3CF83F712004BFCC00EA19F1 /* CustomKeybordUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF83F702004BFCC00EA19F1 /* CustomKeybordUITests.m */; };
+		3CF83F802004C0F200EA19F1 /* PwCustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF83F7F2004C0F200EA19F1 /* PwCustomKeyboard.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CF83F622004BFCC00EA19F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CF83F412004BFCC00EA19F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CF83F482004BFCC00EA19F1;
+			remoteInfo = CustomKeybord;
+		};
+		3CF83F6D2004BFCC00EA19F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CF83F412004BFCC00EA19F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CF83F482004BFCC00EA19F1;
+			remoteInfo = CustomKeybord;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C831A2E2005AB9900B1736A /* PwNumKeyBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PwNumKeyBoardView.h; sourceTree = "<group>"; };
+		3C831A2F2005AB9900B1736A /* PwNumKeyBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PwNumKeyBoardView.m; sourceTree = "<group>"; };
+		3C831A312005AC1600B1736A /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		3C831A322005B08100B1736A /* PwLettersKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PwLettersKeyboard.h; sourceTree = "<group>"; };
+		3C831A332005B08100B1736A /* PwLettersKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PwLettersKeyboard.m; sourceTree = "<group>"; };
+		3C831A352005C0AA00B1736A /* PwSymbolKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PwSymbolKeyboard.h; sourceTree = "<group>"; };
+		3C831A362005C0AA00B1736A /* PwSymbolKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PwSymbolKeyboard.m; sourceTree = "<group>"; };
+		3C831A382005CB9100B1736A /* PwKeyboardBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PwKeyboardBaseView.h; sourceTree = "<group>"; };
+		3C831A392005CB9100B1736A /* PwKeyboardBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PwKeyboardBaseView.m; sourceTree = "<group>"; };
+		3CF83F492004BFCC00EA19F1 /* CustomKeybord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomKeybord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF83F4C2004BFCC00EA19F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3CF83F4D2004BFCC00EA19F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3CF83F4F2004BFCC00EA19F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3CF83F502004BFCC00EA19F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3CF83F532004BFCC00EA19F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CF83F552004BFCC00EA19F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CF83F582004BFCC00EA19F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CF83F5A2004BFCC00EA19F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF83F5B2004BFCC00EA19F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3CF83F612004BFCC00EA19F1 /* CustomKeybordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomKeybordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF83F652004BFCC00EA19F1 /* CustomKeybordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKeybordTests.m; sourceTree = "<group>"; };
+		3CF83F672004BFCC00EA19F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF83F6C2004BFCC00EA19F1 /* CustomKeybordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomKeybordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF83F702004BFCC00EA19F1 /* CustomKeybordUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKeybordUITests.m; sourceTree = "<group>"; };
+		3CF83F722004BFCC00EA19F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF83F7E2004C0F200EA19F1 /* PwCustomKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PwCustomKeyboard.h; sourceTree = "<group>"; };
+		3CF83F7F2004C0F200EA19F1 /* PwCustomKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PwCustomKeyboard.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CF83F462004BFCC00EA19F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CF83F5E2004BFCC00EA19F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CF83F692004BFCC00EA19F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CF83F402004BFCC00EA19F1 = {
+			isa = PBXGroup;
+			children = (
+				3CF83F4B2004BFCC00EA19F1 /* CustomKeybord */,
+				3CF83F642004BFCC00EA19F1 /* CustomKeybordTests */,
+				3CF83F6F2004BFCC00EA19F1 /* CustomKeybordUITests */,
+				3CF83F4A2004BFCC00EA19F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CF83F4A2004BFCC00EA19F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CF83F492004BFCC00EA19F1 /* CustomKeybord.app */,
+				3CF83F612004BFCC00EA19F1 /* CustomKeybordTests.xctest */,
+				3CF83F6C2004BFCC00EA19F1 /* CustomKeybordUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CF83F4B2004BFCC00EA19F1 /* CustomKeybord */ = {
+			isa = PBXGroup;
+			children = (
+				3CF83F4C2004BFCC00EA19F1 /* AppDelegate.h */,
+				3CF83F4D2004BFCC00EA19F1 /* AppDelegate.m */,
+				3CF83F4F2004BFCC00EA19F1 /* ViewController.h */,
+				3CF83F502004BFCC00EA19F1 /* ViewController.m */,
+				3CF83F7E2004C0F200EA19F1 /* PwCustomKeyboard.h */,
+				3CF83F7F2004C0F200EA19F1 /* PwCustomKeyboard.m */,
+				3C831A322005B08100B1736A /* PwLettersKeyboard.h */,
+				3C831A332005B08100B1736A /* PwLettersKeyboard.m */,
+				3C831A2E2005AB9900B1736A /* PwNumKeyBoardView.h */,
+				3C831A2F2005AB9900B1736A /* PwNumKeyBoardView.m */,
+				3C831A352005C0AA00B1736A /* PwSymbolKeyboard.h */,
+				3C831A362005C0AA00B1736A /* PwSymbolKeyboard.m */,
+				3C831A382005CB9100B1736A /* PwKeyboardBaseView.h */,
+				3C831A392005CB9100B1736A /* PwKeyboardBaseView.m */,
+				3C831A312005AC1600B1736A /* Constant.h */,
+				3CF83F522004BFCC00EA19F1 /* Main.storyboard */,
+				3CF83F552004BFCC00EA19F1 /* Assets.xcassets */,
+				3CF83F572004BFCC00EA19F1 /* LaunchScreen.storyboard */,
+				3CF83F5A2004BFCC00EA19F1 /* Info.plist */,
+				3CF83F5B2004BFCC00EA19F1 /* main.m */,
+			);
+			path = CustomKeybord;
+			sourceTree = "<group>";
+		};
+		3CF83F642004BFCC00EA19F1 /* CustomKeybordTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CF83F652004BFCC00EA19F1 /* CustomKeybordTests.m */,
+				3CF83F672004BFCC00EA19F1 /* Info.plist */,
+			);
+			path = CustomKeybordTests;
+			sourceTree = "<group>";
+		};
+		3CF83F6F2004BFCC00EA19F1 /* CustomKeybordUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3CF83F702004BFCC00EA19F1 /* CustomKeybordUITests.m */,
+				3CF83F722004BFCC00EA19F1 /* Info.plist */,
+			);
+			path = CustomKeybordUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CF83F482004BFCC00EA19F1 /* CustomKeybord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CF83F752004BFCC00EA19F1 /* Build configuration list for PBXNativeTarget "CustomKeybord" */;
+			buildPhases = (
+				3CF83F452004BFCC00EA19F1 /* Sources */,
+				3CF83F462004BFCC00EA19F1 /* Frameworks */,
+				3CF83F472004BFCC00EA19F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomKeybord;
+			productName = CustomKeybord;
+			productReference = 3CF83F492004BFCC00EA19F1 /* CustomKeybord.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CF83F602004BFCC00EA19F1 /* CustomKeybordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CF83F782004BFCC00EA19F1 /* Build configuration list for PBXNativeTarget "CustomKeybordTests" */;
+			buildPhases = (
+				3CF83F5D2004BFCC00EA19F1 /* Sources */,
+				3CF83F5E2004BFCC00EA19F1 /* Frameworks */,
+				3CF83F5F2004BFCC00EA19F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CF83F632004BFCC00EA19F1 /* PBXTargetDependency */,
+			);
+			name = CustomKeybordTests;
+			productName = CustomKeybordTests;
+			productReference = 3CF83F612004BFCC00EA19F1 /* CustomKeybordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3CF83F6B2004BFCC00EA19F1 /* CustomKeybordUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CF83F7B2004BFCC00EA19F1 /* Build configuration list for PBXNativeTarget "CustomKeybordUITests" */;
+			buildPhases = (
+				3CF83F682004BFCC00EA19F1 /* Sources */,
+				3CF83F692004BFCC00EA19F1 /* Frameworks */,
+				3CF83F6A2004BFCC00EA19F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CF83F6E2004BFCC00EA19F1 /* PBXTargetDependency */,
+			);
+			name = CustomKeybordUITests;
+			productName = CustomKeybordUITests;
+			productReference = 3CF83F6C2004BFCC00EA19F1 /* CustomKeybordUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CF83F412004BFCC00EA19F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = king;
+				TargetAttributes = {
+					3CF83F482004BFCC00EA19F1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3CF83F602004BFCC00EA19F1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CF83F482004BFCC00EA19F1;
+					};
+					3CF83F6B2004BFCC00EA19F1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CF83F482004BFCC00EA19F1;
+					};
+				};
+			};
+			buildConfigurationList = 3CF83F442004BFCC00EA19F1 /* Build configuration list for PBXProject "CustomKeybord" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CF83F402004BFCC00EA19F1;
+			productRefGroup = 3CF83F4A2004BFCC00EA19F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CF83F482004BFCC00EA19F1 /* CustomKeybord */,
+				3CF83F602004BFCC00EA19F1 /* CustomKeybordTests */,
+				3CF83F6B2004BFCC00EA19F1 /* CustomKeybordUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CF83F472004BFCC00EA19F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CF83F592004BFCC00EA19F1 /* LaunchScreen.storyboard in Resources */,
+				3CF83F562004BFCC00EA19F1 /* Assets.xcassets in Resources */,
+				3CF83F542004BFCC00EA19F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CF83F5F2004BFCC00EA19F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CF83F6A2004BFCC00EA19F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CF83F452004BFCC00EA19F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C831A302005AB9900B1736A /* PwNumKeyBoardView.m in Sources */,
+				3CF83F802004C0F200EA19F1 /* PwCustomKeyboard.m in Sources */,
+				3CF83F512004BFCC00EA19F1 /* ViewController.m in Sources */,
+				3C831A342005B08100B1736A /* PwLettersKeyboard.m in Sources */,
+				3CF83F5C2004BFCC00EA19F1 /* main.m in Sources */,
+				3C831A3A2005CB9100B1736A /* PwKeyboardBaseView.m in Sources */,
+				3CF83F4E2004BFCC00EA19F1 /* AppDelegate.m in Sources */,
+				3C831A372005C0AA00B1736A /* PwSymbolKeyboard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CF83F5D2004BFCC00EA19F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CF83F662004BFCC00EA19F1 /* CustomKeybordTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CF83F682004BFCC00EA19F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CF83F712004BFCC00EA19F1 /* CustomKeybordUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CF83F632004BFCC00EA19F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CF83F482004BFCC00EA19F1 /* CustomKeybord */;
+			targetProxy = 3CF83F622004BFCC00EA19F1 /* PBXContainerItemProxy */;
+		};
+		3CF83F6E2004BFCC00EA19F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CF83F482004BFCC00EA19F1 /* CustomKeybord */;
+			targetProxy = 3CF83F6D2004BFCC00EA19F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CF83F522004BFCC00EA19F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF83F532004BFCC00EA19F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CF83F572004BFCC00EA19F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF83F582004BFCC00EA19F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CF83F732004BFCC00EA19F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3CF83F742004BFCC00EA19F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CF83F762004BFCC00EA19F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QP99DRZ3CS;
+				INFOPLIST_FILE = CustomKeybord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.CustomKeybord";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CF83F772004BFCC00EA19F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QP99DRZ3CS;
+				INFOPLIST_FILE = CustomKeybord/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.CustomKeybord";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3CF83F792004BFCC00EA19F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CustomKeybordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.CustomKeybordTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomKeybord.app/CustomKeybord";
+			};
+			name = Debug;
+		};
+		3CF83F7A2004BFCC00EA19F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CustomKeybordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.CustomKeybordTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomKeybord.app/CustomKeybord";
+			};
+			name = Release;
+		};
+		3CF83F7C2004BFCC00EA19F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CustomKeybordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.CustomKeybordUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CustomKeybord;
+			};
+			name = Debug;
+		};
+		3CF83F7D2004BFCC00EA19F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CustomKeybordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.CustomKeybordUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CustomKeybord;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CF83F442004BFCC00EA19F1 /* Build configuration list for PBXProject "CustomKeybord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CF83F732004BFCC00EA19F1 /* Debug */,
+				3CF83F742004BFCC00EA19F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CF83F752004BFCC00EA19F1 /* Build configuration list for PBXNativeTarget "CustomKeybord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CF83F762004BFCC00EA19F1 /* Debug */,
+				3CF83F772004BFCC00EA19F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CF83F782004BFCC00EA19F1 /* Build configuration list for PBXNativeTarget "CustomKeybordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CF83F792004BFCC00EA19F1 /* Debug */,
+				3CF83F7A2004BFCC00EA19F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CF83F7B2004BFCC00EA19F1 /* Build configuration list for PBXNativeTarget "CustomKeybordUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CF83F7C2004BFCC00EA19F1 /* Debug */,
+				3CF83F7D2004BFCC00EA19F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CF83F412004BFCC00EA19F1 /* Project object */;
+}
