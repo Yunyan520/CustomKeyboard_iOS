@@ -59,6 +59,7 @@
     for (NSInteger i = 0; i < _firstArr.count; i++) {
         UIButton *btn = [self configBtn:CGRectMake(xDistance+i*(xDistance+letterBtnWidth), 0, letterBtnWidth, btnHeight) title:_firstArr[i] contentView:self];
         [btn addTarget:self action:@selector(letterBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(buttonBackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
         [_letterBtns addObject:btn];
     }
     
@@ -67,6 +68,7 @@
     for (NSInteger i = 0; i < _seArr.count; i++) {
         UIButton *btn = [self configBtn:CGRectMake(seStartX+i*(xDistance+letterBtnWidth), seBtnY, letterBtnWidth, btnHeight) title:_seArr[i] contentView:self];
         [btn addTarget:self action:@selector(letterBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(buttonBackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
         [_letterBtns addObject:btn];
     }
     
@@ -75,6 +77,7 @@
     for (NSInteger i = 0; i < _thiArr.count; i++) {
         UIButton *btn = [self configBtn:CGRectMake(thiStartX+i*(xDistance+letterBtnWidth), thiBtnY, letterBtnWidth, btnHeight) title:_thiArr[i] contentView:self];
         [btn addTarget:self action:@selector(letterBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(buttonBackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
         [_letterBtns addObject:btn];
     }
     //大写键
@@ -89,12 +92,15 @@
     CGFloat spaceBtnWidth = seStartX+letterBtnWidth+6*(letterBtnWidth+xDistance)-xDistance;
     UIButton *spaceBtn = [self configBtn:CGRectMake(xDistance, seBtnY*3, spaceBtnWidth, btnHeight) title:@"   " contentView:self];
     [spaceBtn addTarget:self action:@selector(letterBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [spaceBtn addTarget:self action:@selector(buttonBackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
     //确认键
     UIButton *returnBtn = [self configBtn:CGRectMake(seStartX+7*(xDistance+letterBtnWidth), seBtnY*3, seStartX+letterBtnWidth+xDistance+letterBtnWidth, btnHeight) title:@"return" contentView:self];
     [returnBtn addTarget:self action:@selector(returnBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [returnBtn addTarget:self action:@selector(buttonBackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
 }
 - (void)letterBtnClicked:(UIButton *)sender
 {
+    [self buttonBackGroundNormal:sender];
     if(self.btnClickedCallback)
     {
         self.btnClickedCallback(sender);
@@ -118,10 +124,18 @@
 }
 - (void)returnBtnClicked:(UIButton *)sender
 {
+    [self buttonBackGroundNormal:sender];
     if(self.returnBtnClickedCallback)
     {
         self.returnBtnClickedCallback();
     }
+}- (void)buttonBackGroundNormal:(UIButton *)sender
+{
+    sender.backgroundColor = [UIColor whiteColor];
+}
+- (void)buttonBackGroundHighlighted:(UIButton *)sender
+{
+    sender.backgroundColor = [UIColor grayColor];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

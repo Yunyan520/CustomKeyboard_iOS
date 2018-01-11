@@ -69,15 +69,16 @@
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [btn.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
             btn.backgroundColor = [UIColor whiteColor];
+            [btn addTarget:self action:@selector(buttonBackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
             if(i == 2 && j == 2)
             {
                 [btn setTitle:@"delete" forState:UIControlStateNormal];
-                [btn addTarget:self action:@selector(deleteBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+                [btn addTarget:self action:@selector(deleteBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
             }
             else if(i == 2 && j == 3)
             {
                 [btn setTitle:@"return" forState:UIControlStateNormal];
-                [btn addTarget:self action:@selector(returnBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+                [btn addTarget:self action:@selector(returnBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
             }
             else
             {
@@ -91,24 +92,35 @@
 }
 - (void)numBtnClicked:(UIButton *)sender
 {
+    [self buttonBackGroundNormal:sender];
     if(self.btnClickedCallback)
     {
         self.btnClickedCallback(sender);
     }
 }
-- (void)deleteBtnClicked
+- (void)deleteBtnClicked:(UIButton *)sender
 {
+    [self buttonBackGroundNormal:sender];
     if(self.deleteBtnClickedCallback)
     {
         self.deleteBtnClickedCallback();
     }
 }
-- (void)returnBtnClicked
+- (void)returnBtnClicked:(UIButton *)sender
 {
+    [self buttonBackGroundNormal:sender];
     if(self.returnBtnClickedCallback)
     {
         self.returnBtnClickedCallback();
     }
+}
+- (void)buttonBackGroundNormal:(UIButton *)sender
+{
+    sender.backgroundColor = [UIColor whiteColor];
+}
+- (void)buttonBackGroundHighlighted:(UIButton *)sender
+{
+    sender.backgroundColor = [UIColor grayColor];
 }
 - (void)reRankNum
 {
