@@ -81,11 +81,11 @@
         [_letterBtns addObject:btn];
     }
     //大写键
-    UIButton *upperBtn = [self configBtn:CGRectMake(xDistance, thiBtnY, seStartX+letterBtnWidth-xDistance, btnHeight) title:@"" contentView:self];
+    UIButton *upperBtn = [self configBtn:CGRectMake(xDistance, thiBtnY, seStartX+letterBtnWidth-xDistance, btnHeight) title:@"大写" contentView:self];
     upperBtn.backgroundColor = [UIColor grayColor];
     [upperBtn addTarget:self action:@selector(upperBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     //删除键
-    UIButton *deleteBtn = [self configBtn:CGRectMake(seStartX+8*(xDistance+letterBtnWidth), thiBtnY, seStartX+letterBtnWidth, btnHeight) title:@"" contentView:self];
+    UIButton *deleteBtn = [self configBtn:CGRectMake(seStartX+8*(xDistance+letterBtnWidth), thiBtnY, seStartX+letterBtnWidth, btnHeight) title:@"删除" contentView:self];
     deleteBtn.backgroundColor = [UIColor grayColor];
     [deleteBtn addTarget:self action:@selector(deleteBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     //空格键

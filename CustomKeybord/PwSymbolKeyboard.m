@@ -80,7 +80,7 @@
         [btn addTarget:self action:@selector(buttonBackGroundHighlighted:) forControlEvents:UIControlEventTouchDown];
     }
     //删除键
-    UIButton *deleteBtn = [self configBtn:CGRectMake(xDistance+8*(xDistance+btnWidth), secBtnY*2, btnWidth*2+xDistance, btnHeight) title:@"" contentView:self];
+    UIButton *deleteBtn = [self configBtn:CGRectMake(xDistance+8*(xDistance+btnWidth), secBtnY*2, btnWidth*2+xDistance, btnHeight) title:@"delete" contentView:self];
     deleteBtn.backgroundColor = [UIColor grayColor];
     [deleteBtn addTarget:self action:@selector(deleteBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     //确认键
