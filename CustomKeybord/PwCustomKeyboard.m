@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
     CustomKeyboardType_Symbol  = 3//符号
 };
 @interface PwCustomKeyboard()
+/** 三种键盘样式---数字、字母、符号 */
 @property(nonatomic, strong) PwLettersKeyboard *letterKeyboard;
 @property(nonatomic, strong) PwNumKeyBoardView *numKeyboard;
 @property(nonatomic, strong) PwSymbolKeyboard *symbolKeyboard;
@@ -65,6 +66,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
         btn.tag = (CustomKeyboardType)i+1;
         if(i == 1)
         {
+            //默认字母键盘
             btn.selected = YES;
         }
         [btn addTarget:self action:@selector(typeBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
