@@ -10,13 +10,13 @@
 
 @class PwCustomKeyboard;
 @protocol CustomKeyboardDelegate <NSObject>
-- (void)customKeyboard:(PwCustomKeyboard *)customKeyboard didClickAtNormalButton:(UIButton *)button;
-/** 点击了删除键 */
-- (void)customKeyboardDidClickedDelete:(PwCustomKeyboard *)customKeyboard;
 /** 点击return按钮 */
 - (void)customKeyboardDidClickedReturn:(PwCustomKeyboard *)customKeyboard;
 @end
+
+
 @interface PwCustomKeyboard : UIView
-- (instancetype)init;
+- (instancetype)initWithTextView:(UITextView *)textView;
+- (instancetype)initWithTextField:(UITextField *)field;
 @property (nonatomic, weak) id<CustomKeyboardDelegate> delegate;
 @end

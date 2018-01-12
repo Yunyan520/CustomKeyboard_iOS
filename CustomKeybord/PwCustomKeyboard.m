@@ -17,6 +17,9 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
     CustomKeyboardType_Symbol  = 3//符号
 };
 @interface PwCustomKeyboard()
+/** 需要操作的textView */
+@property(nonatomic, strong) UITextView *textView;
+@property(nonatomic, strong) UITextField *textField;
 /** 三种键盘样式---数字、字母、符号 */
 @property(nonatomic, strong) PwLettersKeyboard *letterKeyboard;
 @property(nonatomic, strong) PwNumKeyBoardView *numKeyboard;
@@ -24,19 +27,35 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
 @end
 
 @implementation PwCustomKeyboard
-- (instancetype)init
+- (instancetype)initWithTextView:(UITextView *)textView
 {
     self = [super init];
     if(self)
     {
-        self.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
-        [self configKeyboardType];
-        [self configNumKeyBoard];
-        [self configLetterKeyboard];
-        [self configSymbolKeyboard];
+        self.textView = textView;
+        [self viewInit];
     }
     return self;
-}/**
+}
+- (instancetype)initWithTextField:(UITextField *)field
+{
+    self = [super init];
+    if(self)
+    {
+        self.textField = field;
+        [self viewInit];
+    }
+    return self;
+}
+- (void)viewInit
+{
+    self.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
+    [self configKeyboardType];
+    [self configNumKeyBoard];
+    [self configLetterKeyboard];
+    [self configSymbolKeyboard];
+}
+/**
   *  锁定键盘高度
   */
 - (void)setFrame:(CGRect)frame
@@ -107,16 +126,10 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
     self.letterKeyboard = [[PwLettersKeyboard alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
     WS(weakSelf, self);
     [self.letterKeyboard setBtnClickedCallback:^(UIButton *btn) {
-        if([weakSelf.delegate respondsToSelector:@selector(customKeyboard: didClickAtNormalButton:)])
-        {
-            [weakSelf.delegate customKeyboard:weakSelf didClickAtNormalButton:btn];
-        }
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField  insertText:btn.currentTitle];
     }];
     [self.letterKeyboard setDeleteBtnClickedCallback:^{
-        if([weakSelf.delegate respondsToSelector:@selector(customKeyboardDidClickedDelete:)])
-        {
-            [weakSelf.delegate customKeyboardDidClickedDelete:weakSelf];
-        }
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField deleteBackward];
     }];
     [self.letterKeyboard setReturnBtnClickedCallback:^{
         if([weakSelf.delegate respondsToSelector:@selector(customKeyboardDidClickedReturn:)])
@@ -131,16 +144,10 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
     self.numKeyboard = [[PwNumKeyBoardView alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
     WS(weakSelf, self);
     [self.numKeyboard setBtnClickedCallback:^(UIButton *btn) {
-        if([weakSelf.delegate respondsToSelector:@selector(customKeyboard: didClickAtNormalButton:)])
-        {
-            [weakSelf.delegate customKeyboard:weakSelf didClickAtNormalButton:btn];
-        }
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField insertText:btn.currentTitle];
     }];
     [self.numKeyboard setDeleteBtnClickedCallback:^{
-        if([weakSelf.delegate respondsToSelector:@selector(customKeyboardDidClickedDelete:)])
-        {
-            [weakSelf.delegate customKeyboardDidClickedDelete:weakSelf];
-        }
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField deleteBackward];
     }];
     [self.numKeyboard setReturnBtnClickedCallback:^{
         if([weakSelf.delegate respondsToSelector:@selector(customKeyboardDidClickedReturn:)])
@@ -154,16 +161,10 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
     self.symbolKeyboard = [[PwSymbolKeyboard alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
     WS(weakSelf, self);
     [self.symbolKeyboard setBtnClickedCallback:^(UIButton *btn) {
-        if([weakSelf.delegate respondsToSelector:@selector(customKeyboard: didClickAtNormalButton:)])
-        {
-            [weakSelf.delegate customKeyboard:weakSelf didClickAtNormalButton:btn];
-        }
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField insertText:btn.currentTitle];
     }];
     [self.symbolKeyboard setDeleteBtnClickedCallback:^{
-        if([weakSelf.delegate respondsToSelector:@selector(customKeyboardDidClickedDelete:)])
-        {
-            [weakSelf.delegate customKeyboardDidClickedDelete:weakSelf];
-        }
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField deleteBackward];
     }];
     [self.symbolKeyboard setReturnBtnClickedCallback:^{
         if([weakSelf.delegate respondsToSelector:@selector(customKeyboardDidClickedReturn:)])
