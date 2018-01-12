@@ -69,6 +69,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
     bounds.size.height = AUTO_ADAPT_SIZE_VALUE(233, 253, 283);
     [super setBounds:bounds];
 }
+//创建三种键盘切换button
 - (void)configKeyboardType
 {
     NSInteger btnTypeCount = 3;
@@ -92,6 +93,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
         [self addSubview:btn];
     }
 }
+//点击切换键盘
 - (void)typeBtnClicked:(UIButton *)sender
 {
     if(sender.selected)
@@ -121,6 +123,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
         [self clickSymbleTypeBtn];
     }
 }
+//创建字母键盘
 - (void)configLetterKeyboard
 {
     self.letterKeyboard = [[PwLettersKeyboard alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
@@ -139,6 +142,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
     }];
     [self addSubview:self.letterKeyboard];
 }
+//创建数字键盘
 - (void)configNumKeyBoard
 {
     self.numKeyboard = [[PwNumKeyBoardView alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
@@ -156,6 +160,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
         }
     }];
 }
+//创建符号键盘
 - (void)configSymbolKeyboard
 {
     self.symbolKeyboard = [[PwSymbolKeyboard alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
