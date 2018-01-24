@@ -103,7 +103,7 @@
     [self buttonBackGroundNormal:sender];
     if(self.btnClickedCallback)
     {
-        self.btnClickedCallback(sender);
+        self.btnClickedCallback(sender.currentTitle);
     }
 }
 - (void)upperBtnClicked:(UIButton *)sender

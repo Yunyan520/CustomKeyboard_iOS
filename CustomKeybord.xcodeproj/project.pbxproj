@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1C9B34201839D700547192 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C9B33201839D700547192 /* CustomButton.m */; };
 		3C831A302005AB9900B1736A /* PwNumKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C831A2F2005AB9900B1736A /* PwNumKeyBoardView.m */; };
 		3C831A342005B08100B1736A /* PwLettersKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C831A332005B08100B1736A /* PwLettersKeyboard.m */; };
 		3C831A372005C0AA00B1736A /* PwSymbolKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C831A362005C0AA00B1736A /* PwSymbolKeyboard.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C1C9B32201839D700547192 /* CustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		3C1C9B33201839D700547192 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		3C831A2E2005AB9900B1736A /* PwNumKeyBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PwNumKeyBoardView.h; sourceTree = "<group>"; };
 		3C831A2F2005AB9900B1736A /* PwNumKeyBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PwNumKeyBoardView.m; sourceTree = "<group>"; };
 		3C831A312005AC1600B1736A /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				3C831A2F2005AB9900B1736A /* PwNumKeyBoardView.m */,
 				3C831A352005C0AA00B1736A /* PwSymbolKeyboard.h */,
 				3C831A362005C0AA00B1736A /* PwSymbolKeyboard.m */,
+				3C1C9B32201839D700547192 /* CustomButton.h */,
+				3C1C9B33201839D700547192 /* CustomButton.m */,
 				3C831A382005CB9100B1736A /* PwKeyboardBaseView.h */,
 				3C831A392005CB9100B1736A /* PwKeyboardBaseView.m */,
 				3C831A312005AC1600B1736A /* Constant.h */,
@@ -295,6 +300,7 @@
 				3C831A302005AB9900B1736A /* PwNumKeyBoardView.m in Sources */,
 				3CF83F802004C0F200EA19F1 /* PwCustomKeyboard.m in Sources */,
 				3CF83F512004BFCC00EA19F1 /* ViewController.m in Sources */,
+				3C1C9B34201839D700547192 /* CustomButton.m in Sources */,
 				3C831A342005B08100B1736A /* PwLettersKeyboard.m in Sources */,
 				3CF83F5C2004BFCC00EA19F1 /* main.m in Sources */,
 				3C831A3A2005CB9100B1736A /* PwKeyboardBaseView.m in Sources */,

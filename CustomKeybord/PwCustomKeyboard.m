@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
 @end
 
 @implementation PwCustomKeyboard
+static CGFloat keyY = 100;
 - (instancetype)initWithTextView:(UITextView *)textView
 {
     self = [super init];
@@ -60,13 +61,13 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
   */
 - (void)setFrame:(CGRect)frame
 {
-    frame.size.height = AUTO_ADAPT_SIZE_VALUE(233, 253, 283);
+    frame.size.height = 350;//AUTO_ADAPT_SIZE_VALUE(233, 253, 283);
     [super setFrame:frame];
 }
 
 - (void)setBounds:(CGRect)bounds
 {
-    bounds.size.height = AUTO_ADAPT_SIZE_VALUE(233, 253, 283);
+    bounds.size.height = 350;//AUTO_ADAPT_SIZE_VALUE(233, 253, 283);
     [super setBounds:bounds];
 }
 //创建三种键盘切换button
@@ -126,10 +127,10 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
 //创建字母键盘
 - (void)configLetterKeyboard
 {
-    self.letterKeyboard = [[PwLettersKeyboard alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
+    self.letterKeyboard = [[PwLettersKeyboard alloc] initWithFrame:CGRectMake(0, keyY, DeviceWidth, self.frame.size.height-keyY)];
     WS(weakSelf, self);
-    [self.letterKeyboard setBtnClickedCallback:^(UIButton *btn) {
-        [weakSelf.textView?weakSelf.textView:weakSelf.textField  insertText:btn.currentTitle];
+    [self.letterKeyboard setBtnClickedCallback:^(NSString *str) {
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField  insertText:str];
     }];
     [self.letterKeyboard setDeleteBtnClickedCallback:^{
         [weakSelf.textView?weakSelf.textView:weakSelf.textField deleteBackward];
@@ -145,10 +146,10 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
 //创建数字键盘
 - (void)configNumKeyBoard
 {
-    self.numKeyboard = [[PwNumKeyBoardView alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
+    self.numKeyboard = [[PwNumKeyBoardView alloc] initWithFrame:CGRectMake(0, keyY, DeviceWidth, self.frame.size.height-keyY)];
     WS(weakSelf, self);
-    [self.numKeyboard setBtnClickedCallback:^(UIButton *btn) {
-        [weakSelf.textView?weakSelf.textView:weakSelf.textField insertText:btn.currentTitle];
+    [self.numKeyboard setBtnClickedCallback:^(NSString *str) {
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField insertText:str];
     }];
     [self.numKeyboard setDeleteBtnClickedCallback:^{
         [weakSelf.textView?weakSelf.textView:weakSelf.textField deleteBackward];
@@ -163,10 +164,10 @@ typedef NS_ENUM(NSInteger, CustomKeyboardType)
 //创建符号键盘
 - (void)configSymbolKeyboard
 {
-    self.symbolKeyboard = [[PwSymbolKeyboard alloc] initWithFrame:CGRectMake(0, 30, DeviceWidth, self.frame.size.height-30)];
+    self.symbolKeyboard = [[PwSymbolKeyboard alloc] initWithFrame:CGRectMake(0, keyY, DeviceWidth, self.frame.size.height-keyY)];
     WS(weakSelf, self);
-    [self.symbolKeyboard setBtnClickedCallback:^(UIButton *btn) {
-        [weakSelf.textView?weakSelf.textView:weakSelf.textField insertText:btn.currentTitle];
+    [self.symbolKeyboard setBtnClickedCallback:^(NSString *str) {
+        [weakSelf.textView?weakSelf.textView:weakSelf.textField insertText:str];
     }];
     [self.symbolKeyboard setDeleteBtnClickedCallback:^{
         [weakSelf.textView?weakSelf.textView:weakSelf.textField deleteBackward];

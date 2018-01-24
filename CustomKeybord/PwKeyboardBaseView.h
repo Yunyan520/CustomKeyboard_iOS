@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PwKeyboardBaseView : UIView
-@property(nonatomic, copy) void(^btnClickedCallback)(UIButton *btn);
+@property(nonatomic, copy) void(^btnClickedCallback)(NSString *str);
 @property(nonatomic, copy) void(^deleteBtnClickedCallback)(void);
 @property(nonatomic, copy) void(^returnBtnClickedCallback)(void);
 - (UIButton *)configBtn:(CGRect)btnRect title:(NSString *)title contentView:(UIView *)contentView;
